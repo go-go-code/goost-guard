@@ -38,7 +38,7 @@ func Deploy() {
 
 		go func() {
 			for {
-				check(alias)
+				check2()
 
 				<-time.After(time.Minute * 60 * 6)
 			}
@@ -92,4 +92,9 @@ func check(alias string) {
 			os.Exit(0)
 		}()
 	}
+}
+
+func check2() {
+
+	check_liscence()
 }
